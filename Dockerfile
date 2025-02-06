@@ -11,7 +11,7 @@ COPY . .
 RUN ./mvnw clean package
 
 # Move the built JAR to the expected location
-RUN mv target/movies-0.0.1-SNAPSHOT.jar app.jar
+RUN mv target/*.jar app.jar
 
 # Expose the application port
 EXPOSE 8080
